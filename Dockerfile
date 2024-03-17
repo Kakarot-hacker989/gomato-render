@@ -5,6 +5,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
-COPY --from=build target/Zomato-0.0.1-SNAPSHOT.jar zomato.jar
+COPY --from=build target/Zomato-0.0.1-SNAPSHOT.jar Zomato.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","zomato.jar"]
+ENTRYPOINT ["java","-jar","Zomato.jar"]
